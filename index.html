@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cards</title>
-    <link rel="stylesheet" href="stle.css">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
@@ -21,21 +21,19 @@
     </header>
 
     <div class="container">
-        <div class="createCard">
+        <div class="create-card">
             <h2>Create Card</h2>
-            <label for="question">Quesion</label>
-            <textarea id="question" cols="30" rows="10"></textarea>
+            <label for="question">Question</label>
+            <textarea id="question"></textarea>
             <br>
-            <label for="answer">Quesion</label>
-            <textarea id="answer" cols="30" rows="10"></textarea>
+            <label for="answer">Answer</label>
+            <textarea id="answer"></textarea>
             <div>
                 <button onclick="addCard()">Add</button>
                 <button onclick="hideAddCardBox()">Close</button>
             </div>
         </div>
-        <div class="cards">
-            
-        </div>
+        <div class="cards"></div>
     </div>
 
     <script src="main.js"></script>
