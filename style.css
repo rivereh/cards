@@ -84,6 +84,7 @@ button:hover {
     margin: 10px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
 }
 
 .card .card-question {
@@ -95,6 +96,13 @@ button:hover {
 .card .card-answer {
     text-align: center;
     color: red;
+}
+
+.card .card-delete {
+    position: absolute;
+    right: 10px;
+    bottom: 5px;
+    cursor: pointer;
 }
 
 .card h2 {
