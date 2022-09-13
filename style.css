@@ -44,7 +44,7 @@ button:hover {
     font-family: inherit;
 }
 
-.create-card {
+.create-card-container {
     width: 400px;
     margin: auto;
     padding: 20px;
@@ -54,7 +54,7 @@ button:hover {
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
 }
 
-.create-card textarea {
+.create-card-container textarea {
     width: 100%;
     border-radius: 5px;
     font-family: inherit;
@@ -62,7 +62,7 @@ button:hover {
     margin-bottom: 5px;
 }
 
-.create-card h2 {
+.create-card-container h2 {
     text-align: center;
 }
 
@@ -84,6 +84,10 @@ button:hover {
     margin: 10px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+}
+
+.card .card-answer {
+    /* display: none; */
 }
 
 .card h2 {

@@ -13,7 +13,7 @@
             <div class="nav">
                 <h1>Cards</h1>
                 <div>
-                    <button class="add">Add</button>
+                    <button onclick="toggleCreateCardContainer()">Add</button>
                     <button onclick="clearCards()">Clear</button>
                 </div>
             </div>
@@ -21,7 +21,7 @@
     </header>
 
     <div class="container">
-        <div class="create-card">
+        <div class="create-card-container">
             <h2>Create Card</h2>
             <label for="question">Question</label>
             <textarea id="question"></textarea>
@@ -30,10 +30,10 @@
             <textarea id="answer"></textarea>
             <div>
                 <button onclick="addCard()">Add</button>
-                <button onclick="hideAddCardBox()">Close</button>
+                <button onclick="toggleCreateCardContainer()">Close</button>
             </div>
         </div>
-        <div class="cards"></div>
+        <div class="card-container"></div>
     </div>
 
     <script src="main.js"></script>
