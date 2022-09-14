@@ -44,11 +44,18 @@ button:hover {
     font-family: inherit;
 }
 
+.modal {
+    position: absolute;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    z-index: 1;
+}
+
 .create-card-container {
     width: 400px;
-    margin: auto;
     padding: 20px;
-    margin-top: 10px;
+    margin-top: 3rem;
     border-radius: 5px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
@@ -100,23 +107,6 @@ button:hover {
     font-size: 1rem;
 }
 
-@media(max-width: 770px) {
-    .card {
-        margin: 10px auto;
-    }
-}
-
-@media(max-width: 480px) {
-    .nav {
-        flex-direction: column;
-        align-items: center;
-    }
-    
-    .create-card, .card {
-        width: 100%;
-    }
-}
-
 .card-container {
     width: 370px;
     height: 200px;
@@ -131,7 +121,7 @@ button:hover {
     position: relative;
     width: 100%;
     height: 100%;
-    transition: transform 1s;
+    transition: transform 0.5s;
     transform-style: preserve-3d;
 }
 
@@ -151,13 +141,20 @@ button:hover {
     border-radius: 5px;
 }
 
-.card-front {
-    /* background-color: #333; */
-    /* color: #fff; */
-}
-
 .card-back {
     background-color: #fff;
-    /* color: #fff; */
     transform: rotateY(180deg);
+}
+
+@media(max-width: 850px) {
+    .cards {
+        justify-content: center;
+    }
+}
+
+@media(max-width: 480px) {
+    .nav {
+        flex-direction: column;
+        align-items: center;
+    }
 }

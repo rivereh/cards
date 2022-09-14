@@ -5,6 +5,7 @@ const answerTextArea = document.querySelector('#answer');
 let cardArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
 let cardID = 0;
 
+createCardContainer.style.display = 'none'
 cardArray.forEach(cardMaker);
 
 function clearCards() {
