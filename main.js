@@ -99,6 +99,19 @@ function cardMaker(cardInfo) {
     card.appendChild(cardBack);
     cardContainer.appendChild(card);
 
+    question.setAttribute('contenteditable', 'true');
+    answer.setAttribute('contenteditable', 'true');
+
+    question.addEventListener('input', () => {
+        cardInfo.question = question.textContent;
+        localStorage.setItem('items', JSON.stringify(cardArray));
+    });
+
+    answer.addEventListener('input', () => {
+        cardInfo.answer = answer.textContent;
+        localStorage.setItem('items', JSON.stringify(cardArray));
+    });
+
     cards.appendChild(cardContainer);
 }
 

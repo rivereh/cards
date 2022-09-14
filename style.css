@@ -123,6 +123,13 @@ button:hover {
     height: 100%;
     transition: transform 0.5s;
     transform-style: preserve-3d;
+    border-radius: 5px;
+}
+
+.card p:focus[contenteditable="true"] {
+    background-color: yellow;
+    width: 100%;
+    text-align: center;
 }
 
 .flip {
