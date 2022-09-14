@@ -78,31 +78,17 @@ button:hover {
     perspective: 1000px;
 }
 
-.card {
-    width: 370px;
-    height: 200px;
-    word-wrap: break-word;
-    margin: 10px;
-    background-color: white;
-    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
-    position: relative;
-}
-
-.card .card-question {
-    border-top: 1px solid red;
-    padding: 15px;
-    margin-top: 30px;
-}
-
-.card .card-answer {
-    text-align: center;
-    color: red;
-}
-
 .card .card-delete {
     position: absolute;
     right: 10px;
-    bottom: 5px;
+    bottom: 10px;
+    cursor: pointer;
+}
+
+.card .card-flip {
+    position: absolute;
+    right: 10px;
+    top: 10px;
     cursor: pointer;
 }
 
@@ -130,12 +116,12 @@ button:hover {
 .card-container {
     width: 370px;
     height: 200px;
+    margin: 10px;
     perspective: 1000px;
 }
 
 .card {
     word-wrap: break-word;
-    margin: 10px;
     background-color: white;
     box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
     position: relative;
@@ -145,7 +131,7 @@ button:hover {
     transform-style: preserve-3d;
 }
 
-.card-container:hover .card {
+.flip {
     transform: rotateY(180deg);
 }
 
