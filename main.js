@@ -3,7 +3,7 @@ const createCardContainer = document.querySelector('.create-card-container');
 const questionTextArea = document.querySelector('#question');
 const answerTextArea = document.querySelector('#answer');
 let cardArray = localStorage.getItem('items') ? JSON.parse(localStorage.getItem('items')) : [];
-let cardID = -1;
+let cardID = 0;
 
 cardArray.forEach(cardMaker);
 
@@ -18,7 +18,7 @@ function addCard() {
         return;
 
     let cardInfo = {
-        'id': cardID++,
+        'id': 0,
         'question': questionTextArea.value,
         'answer': answerTextArea.value
     }
@@ -31,6 +31,8 @@ function addCard() {
 }
 
 function cardMaker(cardInfo) {
+    cardInfo.id = cardID++;
+
     let cardContainer = document.createElement('div');
     cardContainer.className = 'card-container';
     let card = document.createElement('div');
@@ -57,25 +59,21 @@ function cardMaker(cardInfo) {
     });
 
     deleteButtonFront.addEventListener('click', () => {
-        let cardIndex = cardArray.findIndex(card => {
-            return card.id = cardInfo.id;
-        });
+        let cardIndex = cardArray.findIndex(card => card.id === cardInfo.id);
 
         cardArray.splice(cardIndex, 1);
 
         localStorage.setItem('items', JSON.stringify(cardArray));
-        cardContainer.removeChild(card);
+        cards.removeChild(cardContainer);
     });
 
     deleteButtonBack.addEventListener('click', () => {
-        let cardIndex = cardArray.findIndex(card => {
-            return card.id = cardInfo.id;
-        });
+        let cardIndex = cardArray.findIndex(cardObj => cardObj.id === cardInfo.id);
 
         cardArray.splice(cardIndex, 1);
 
         localStorage.setItem('items', JSON.stringify(cardArray));
-        cardContainer.removeChild(card);
+        cards.removeChild(cardContainer);
     });
     
     let cardFront = document.createElement('div');

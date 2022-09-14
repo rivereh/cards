@@ -85,6 +85,10 @@ button:hover {
     cursor: pointer;
 }
 
+.card p {
+    padding: 20px;
+}
+
 .card .card-flip {
     position: absolute;
     right: 10px;
