@@ -66,7 +66,7 @@ button:hover {
     text-align: center;
 }
 
-.card-container {
+.cards {
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -75,6 +75,7 @@ button:hover {
     margin: auto;
     margin-top: 10px;
     padding: 0 10px;
+    perspective: 1000px;
 }
 
 .card {
@@ -124,4 +125,49 @@ button:hover {
     .create-card, .card {
         width: 100%;
     }
+}
+
+.card-container {
+    width: 370px;
+    height: 200px;
+    perspective: 1000px;
+}
+
+.card {
+    word-wrap: break-word;
+    margin: 10px;
+    background-color: white;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.5);
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 1s;
+    transform-style: preserve-3d;
+}
+
+.card-container:hover .card {
+    transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+
+.card-front {
+    /* background-color: #333; */
+    /* color: #fff; */
+}
+
+.card-back {
+    background-color: #fff;
+    /* color: #fff; */
+    transform: rotateY(180deg);
 }
